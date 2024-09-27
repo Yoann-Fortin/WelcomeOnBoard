@@ -1,0 +1,143 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root {
+   --primaryColor: #A306B6;
+   --backgroundArticle: #D9D9D9;
+   --secondaryTextColor: #f2f2f2;
+   --fontTitle: "Montserrat", sans-serif;
+   --primaryFont: "Source sans 3", sans-serif;
+}
+
+body {
+   font-family: var(--primaryFont);
+}
+
+h1,
+h2,
+h3 {
+   font-family: var(--fontTitle);
+}
+
+a {
+   text-decoration: none;
+}
+
+header {
+   background-color: var(--primaryColor);
+   color: var(--secondaryTextColor);
+   min-height: 50vh;
+   padding: 0.8rem;
+}
+
+nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+li {
+   display: inline-block;
+   margin: .8rem 1.5rem;
+   list-style-type: none;
+}
+
+nav a {
+   color: var(--secondaryTextColor);
+}
+
+a > img {
+   display: inline-block;
+   width: 3rem;
+}
+
+h1 {
+   width: 8ch;
+   margin: auto;
+   font-size: 1.7rem;
+   text-align: center;
+}
+
+h1::before {
+   content: "";
+   display: block;
+   height: 8rem;
+   width: 8rem;
+   background-image: url(html-css-quest-welcome-on-board-material/images/avatar.png);
+   background-size: contain;
+   margin: 2rem auto;
+   border: 3px solid var(--secondaryTextColor);
+   border-radius: 50%;
+   background-color: var(--secondaryTextColor);
+}
+
+h2 {
+   color: var(--primaryColor);
+   font-size: 1.2rem;
+   padding: 0.8rem;
+   text-align: center;
+   font-weight: bold;
+}
+
+article {
+   width: 18rem;
+   height: 18rem;
+   background-color: var(--backgroundArticle);
+   background-image: url(html-css-quest-welcome-on-board-material/images/scalable.png);
+   background-size: 12rem;
+   background-repeat: no-repeat;
+   background-position: center top;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: center;
+   gap: .8rem;
+   margin: 1rem auto;
+   border-radius: 5px;
+}
+
+h3 {
+   font-weight: bold;
+}
+
+button {
+   background-color: var(--primaryColor);
+   color: var(--secondaryTextColor);
+   text-transform: uppercase;
+   padding: .5rem 1rem;
+   border-radius: 10px;
+   border-style: none;
+   margin-bottom: 1rem;
+}
+
+article:first-of-type {
+   margin-top: 0;
+   background-image: url(html-css-quest-welcome-on-board-material/images/responsive.png);
+   background-size: 17rem;
+}
+
+article:last-of-type {
+   background-image: url(html-css-quest-welcome-on-board-material/images/inclusive.png);
+   background-size: 17rem;
+}
+
+section p {
+   padding: .8rem 1rem;
+   line-height: 1.5;
+}
+
+footer {
+   background-color: var(--backgroundArticle);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+}
+
+footer a {
+   color: var(--primaryColor);
+}
