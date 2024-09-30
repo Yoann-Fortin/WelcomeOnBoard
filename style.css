@@ -76,15 +76,26 @@ h1::before {
 
 h2 {
    color: var(--primaryColor);
-   font-size: 1.2rem;
-   padding: 0.8rem;
+   font-size: clamp(1.2rem, 2vw, 5rem);
+   padding: clamp(0.8rem, 2vw, 1.5rem);
    text-align: center;
    font-weight: bold;
+}
+
+section:last-of-type {
+   width: 65ch;
+   margin: auto;
+}
+
+section:first-of-type {
+   display: grid;
+   gap: 1rem;
 }
 
 article {
    width: 18rem;
    height: 18rem;
+   justify-self: center;
    background-color: var(--backgroundArticle);
    background-image: url(html-css-quest-welcome-on-board-material/images/scalable.png);
    background-size: 12rem;
@@ -94,8 +105,7 @@ article {
    flex-direction: column;
    justify-content: end;
    align-items: center;
-   gap: .8rem;
-   margin: 1rem auto;
+   gap: 1rem;
    border-radius: 5px;
 }
 
@@ -140,4 +150,35 @@ footer {
 
 footer a {
    color: var(--primaryColor);
+}
+
+@media screen and (min-width: 992px) {
+   nav {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   h1 {
+      position: relative;
+      margin-left: 25vw;
+      margin-top: 15vh;
+      vertical-align: middle;
+   }
+
+   h1::before {
+      position: absolute;
+      right: -50vw;
+      top: 0;
+      transform: translate(-50%, -50%);
+      height: 12rem;
+      width: 12rem;
+   }
+
+   section:first-of-type {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   section:first-of-type > h2 {
+      grid-column: span 3;
+   }
 }
